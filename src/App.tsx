@@ -7,10 +7,12 @@ import { SignupFormPhase3 } from '../src/components/SignupFormPhase3';
 
 function App() {
   return (
-    <div className='container'>
-      <SignupFormPhase1 />
-      <SignupFormPhase2 />
-      <SignupFormPhase3 />
+    <div className="container-md">
+       <div className="row justify-content-md-center">
+          <SignupFormPhase1 />
+          <SignupFormPhase2 />
+          <SignupFormPhase3 />
+       </div>
     </div>
   );
 }

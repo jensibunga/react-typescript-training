@@ -64,20 +64,18 @@ export class SignupFormPhase2 extends React.Component<Props, State> {
             }} />
             {this.state.form_submit && this.state.password.length < 7 && <span className="error">Password character should be more than 7 characters </span>}
           </div>
-
-          <div className="form-check">
-
-            <input className="form-check-input" type="checkbox" id="flexCheckDefault" onChange={() => {
-
-              this.setState({
-                show_password: !this.state.show_password
-              })
-            }} />
-            <label className="form-check-label" htmlFor="flexCheckDefault">
-              Show Password
-            </label>
+          <div className="mb-3">
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" id="flexCheckDefault" onChange={() => {
+                this.setState({
+                  show_password: !this.state.show_password
+                })
+              }} />
+              <label className="form-check-label" htmlFor="flexCheckDefault">
+                Show Password
+              </label>
+            </div>
           </div>
-
 
           <div className="mb-3">
             <label htmlFor="confirm_password" className="form-label">Confirm Password</label>
@@ -96,7 +94,7 @@ export class SignupFormPhase2 extends React.Component<Props, State> {
                 })
               }} />
               <label className="form-check-label" htmlFor="flexCheckDefault">
-                Accept terms and accept_terms_condition!
+                Accept terms and condition
               </label>
             </div>
           </div>
@@ -111,8 +109,6 @@ export class SignupFormPhase2 extends React.Component<Props, State> {
             {!this.state.form_valid && <p>Form Not valid</p>}
           </div>
         }
-
-
       </>
     )
   }
